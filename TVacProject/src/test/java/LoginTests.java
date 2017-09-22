@@ -27,7 +27,7 @@ public class LoginTests extends BaseTest {
     public void unsuccessfulLogin() {
         WebElement username = driver.findElement(By.id("username"));
         username.clear();
-        username.sendKeys("kdodonov");
+        username.sendKeys(userName);
 
         WebElement password = driver.findElement(By.id("password"));
         password.clear();
@@ -51,11 +51,11 @@ public class LoginTests extends BaseTest {
     public void successfulLogin() {
         WebElement username = driver.findElement(By.id("username"));
         username.clear();
-        username.sendKeys("insertValidLoginHere");
+        username.sendKeys(userName);
 
         WebElement password = driver.findElement(By.id("password"));
         password.clear();
-        password.sendKeys("insertValidPwdHere");
+        password.sendKeys(userPassword);
 
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         loginButton.click();

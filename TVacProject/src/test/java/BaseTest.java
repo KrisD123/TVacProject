@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,7 +7,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
+import selenium.Browser;
+import selenium.BrowserCapabilities;
+import selenium.PropertyLoader;
+import ru.stqa.selenium.factory.WebDriverPool;
 import java.util.concurrent.TimeUnit;
 
 
@@ -15,11 +19,19 @@ import java.util.concurrent.TimeUnit;
  */
 public class BaseTest {
     WebDriver driver;
+    private Browser browser = new Browser();
+    String userName;
+    String userPassword;
 
     @BeforeClass
     public void init() {
-        driver = new ChromeDriver();
-        driver.get("https://t-vac-testschool:38443/");
+        browser.setBrowserName(PropertyLoader.loadProperty("browser.name"));
+        browser.setVersion(PropertyLoader.loadProperty("browser.version"));
+        browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
+        driver = WebDriverPool.DEFAULT.getDriver(BrowserCapabilities.getCapabilities(browser));
+        userName = PropertyLoader.loadProperty("user.name");
+        userPassword = PropertyLoader.loadProperty("user.password");
+        driver.get(PropertyLoader.loadProperty("site.url"));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertTrue(checkLoginPageOpen());
     }
@@ -36,6 +48,7 @@ public class BaseTest {
 
     @AfterClass
     public void stop() {
-        driver.quit();
+        WebDriverPool.DEFAULT.dismissAll();
     }
+
 }
