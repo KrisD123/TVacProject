@@ -65,8 +65,8 @@ public class LoginTests extends BaseTest {
         List<WebElement> errorMessage = driver.findElements(By.xpath(".//div[@class='modal fade login in']//div[@class='modal-body text-center']"));
         softAssert.assertTrue(errorMessage.size()==0, "Error message is displayed");
 
-        List<WebElement> loggedUserName = driver.findElements(By.xpath("//div[@class='menu-heading btn-brand']"));
-        Assert.assertTrue(loggedUserName.size()==1, "User name is not displayed, User is not logged in");
+        String loggedUserName = driver.findElement(By.xpath("//div[@class='menu-heading btn-brand']")).getText();
+        Assert.assertEquals(loggedUserName, "Кристина Додонова", "User name is not displayed, User is not logged in");
 
         softAssert.assertAll();
 

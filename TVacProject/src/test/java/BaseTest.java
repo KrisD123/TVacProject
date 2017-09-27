@@ -29,10 +29,13 @@ public class BaseTest {
         browser.setVersion(PropertyLoader.loadProperty("browser.version"));
         browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
         driver = WebDriverPool.DEFAULT.getDriver(BrowserCapabilities.getCapabilities(browser));
+        driver.get(PropertyLoader.loadProperty("site.url"));
+        if (browser.getBrowserName().equals("ie")) {
+            driver.get("javascript:document.getElementById('overridelink').click();");
+        }
         userName = PropertyLoader.loadProperty("user.name");
         userPassword = PropertyLoader.loadProperty("user.password");
-        driver.get(PropertyLoader.loadProperty("site.url"));
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertTrue(checkLoginPageOpen());
     }
 
