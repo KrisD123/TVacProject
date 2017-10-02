@@ -48,8 +48,8 @@
         <id>chrome</id>
         <properties>
             <site.url>https://t-vac-testschool:38443/</site.url>
-            <user.name>insertValidLoginHere</user.name>
-            <user.password>insertValidPwdHere</user.password>
+            <user.name>kdodonov</user.name>
+            <user.password>pleaseInsertPwd</user.password>
             <browser.name>chrome</browser.name>
             <browser.version></browser.version>
             <browser.platform></browser.platform>
@@ -62,8 +62,8 @@
             <id>ie</id>
             <properties>
                 <site.url>https://t-vac-testschool:38443/</site.url>
-                <user.name>insertValidLoginHere</user.name>
-                <user.password>insertValidPwdHere</user.password>
+                <user.name>kdodonov</user.name>
+                <user.password>pleaseInsertPwd</user.password>
                 <browser.name>ie</browser.name>
                 <browser.version></browser.version>
                 <browser.platform></browser.platform>

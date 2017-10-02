@@ -25,16 +25,7 @@ public class LoginTests extends BaseTest {
 
     @Test(priority = 1)
     public void unsuccessfulLogin() {
-        WebElement username = driver.findElement(By.id("username"));
-        username.clear();
-        username.sendKeys(userName);
-
-        WebElement password = driver.findElement(By.id("password"));
-        password.clear();
-        password.sendKeys("wrongPassword");
-
-        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-        loginButton.click();
+        login(userName, "wrongPassword");
 
         //check that user is not logged in
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -49,16 +40,7 @@ public class LoginTests extends BaseTest {
 
     @Test(priority = 0)
     public void successfulLogin() {
-        WebElement username = driver.findElement(By.id("username"));
-        username.clear();
-        username.sendKeys(userName);
-
-        WebElement password = driver.findElement(By.id("password"));
-        password.clear();
-        password.sendKeys(userPassword);
-
-        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-        loginButton.click();
+        login(userName, userPassword);
 
         SoftAssert softAssert = new SoftAssert();
 

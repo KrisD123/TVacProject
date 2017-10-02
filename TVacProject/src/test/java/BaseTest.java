@@ -29,6 +29,7 @@ public class BaseTest {
         browser.setVersion(PropertyLoader.loadProperty("browser.version"));
         browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
         driver = WebDriverPool.DEFAULT.getDriver(BrowserCapabilities.getCapabilities(browser));
+        driver.manage().window().maximize();
         driver.get(PropertyLoader.loadProperty("site.url"));
         if (browser.getBrowserName().equals("ie")) {
             driver.get("javascript:document.getElementById('overridelink').click();");
@@ -47,6 +48,19 @@ public class BaseTest {
         {
             return false;
         }
+    }
+
+    protected void login(String userName, String userPassword) {
+        WebElement username = driver.findElement(By.id("username"));
+        username.clear();
+        username.sendKeys(userName);
+
+        WebElement password = driver.findElement(By.id("password"));
+        password.clear();
+        password.sendKeys(userPassword);
+
+        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
+        loginButton.click();
     }
 
     @AfterClass
