@@ -4,6 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -12,6 +15,9 @@ import selenium.BrowserCapabilities;
 import selenium.PropertyLoader;
 import ru.stqa.selenium.factory.WebDriverPool;
 import java.util.concurrent.TimeUnit;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 
 /**
@@ -22,6 +28,7 @@ public class BaseTest {
     private Browser browser = new Browser();
     String userName;
     String userPassword;
+    WebDriverWait wait;
 
     @BeforeClass
     public void init() {
@@ -29,8 +36,11 @@ public class BaseTest {
         browser.setVersion(PropertyLoader.loadProperty("browser.version"));
         browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
         driver = WebDriverPool.DEFAULT.getDriver(BrowserCapabilities.getCapabilities(browser));
-        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, 10);
         driver.get(PropertyLoader.loadProperty("site.url"));
+        if (browser.getBrowserName().equals("chrome")) {
+            driver.manage().window().maximize();
+        }
         if (browser.getBrowserName().equals("ie")) {
             driver.get("javascript:document.getElementById('overridelink').click();");
         }
@@ -61,6 +71,12 @@ public class BaseTest {
 
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         loginButton.click();
+    }
+
+    protected void openMyTeamSection() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(wait.until(elementToBeClickable(By.xpath("//div[@class='menu-heading btn-brand']")))).build().perform();
+        wait.until(visibilityOfElementLocated(By.linkText("Моя команда"))).click();
     }
 
     @AfterClass

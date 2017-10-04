@@ -44,6 +44,20 @@
         </dependency>
     </dependencies>
     <profiles>
+        <profile>
+            <id>firefox</id>
+            <properties>
+                <site.url>https://t-vac-testschool:38443/</site.url>
+                <user.name>kdodonov</user.name>
+                <user.password>pleaseInsertPwd</user.password>
+                <browser.name>firefox</browser.name>
+                <browser.version></browser.version>
+                <browser.platform></browser.platform>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
     <profile>
         <id>chrome</id>
         <properties>

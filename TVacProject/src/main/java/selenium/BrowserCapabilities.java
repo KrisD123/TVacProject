@@ -27,8 +27,10 @@ public class BrowserCapabilities {
 
     private static DesiredCapabilities getIECapabilities() {
         DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        capabilities.setCapability("nativeEvents", false);
+        capabilities.setCapability(InternetExplorerDriver.ENABLE_PERSISTENT_HOVERING, false);
+        capabilities.setCapability(InternetExplorerDriver.REQUIRE_WINDOW_FOCUS, false);
+        capabilities.setCapability(InternetExplorerDriver.IE_ENSURE_CLEAN_SESSION, true);
+        capabilities.setCapability(InternetExplorerDriver.ENABLE_ELEMENT_CACHE_CLEANUP, true);
         return capabilities;
     }
 
@@ -36,6 +38,7 @@ public class BrowserCapabilities {
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
         capabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+        capabilities.setJavascriptEnabled(true);
 
         return capabilities;
     }
