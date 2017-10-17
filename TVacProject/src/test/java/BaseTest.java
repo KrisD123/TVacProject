@@ -1,7 +1,4 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -14,6 +11,7 @@ import selenium.Browser;
 import selenium.BrowserCapabilities;
 import selenium.PropertyLoader;
 import ru.stqa.selenium.factory.WebDriverPool;
+
 import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
@@ -54,8 +52,7 @@ public class BaseTest {
         String title = driver.findElement(By.xpath("//title")).getAttribute("innerText");
         if (title.equals("Login")) {
             return true;
-        } else
-        {
+        } else {
             return false;
         }
     }
@@ -77,6 +74,16 @@ public class BaseTest {
         Actions actions = new Actions(driver);
         actions.moveToElement(wait.until(elementToBeClickable(By.xpath("//div[@class='menu-heading btn-brand']")))).build().perform();
         wait.until(visibilityOfElementLocated(By.linkText("Моя команда"))).click();
+    }
+
+    protected void openRepresentativesSectionInNewWindow() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(wait.until(elementToBeClickable(By.xpath("//div[@class='menu-heading btn-brand']")))).build().perform();
+        actions.keyDown(Keys.CONTROL)
+                .click(wait.until(visibilityOfElementLocated(By.linkText("Представители"))))
+                .keyUp(Keys.CONTROL)
+                .build()
+                .perform();
     }
 
     @AfterClass

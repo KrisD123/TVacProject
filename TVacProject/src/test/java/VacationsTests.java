@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -116,6 +117,38 @@ public class VacationsTests extends BaseTest {
         Assert.assertEquals(cancelButtonTooltip, "Отменить");
         Assert.assertEquals(removeButtonTooltip, "Удалить");
         Assert.assertEquals(saveButtonTooltip, "Сохранить");
+
+    }
+
+    @Test
+    public void downloadVacation() throws InterruptedException {
+        WebElement downloadButton = wait.until(elementToBeClickable(By.xpath("//tr/td/div[text()='Заявление принято']/../following-sibling::td/div/a")));
+        downloadButton.click();
+        Thread.sleep(3000);
+        File directory = new File("C:\\Users\\kdodonov\\Desktop\\WorkDocs\\TA Selenium\\TempForDownload");
+        Assert.assertTrue(checkFileWasDownloaded(directory, "Заявление_и_Приказ_о_предоставлении_отпуска.docx"));
+
+        emptyFolderAfterTheTest(directory);
+
+    }
+
+    private boolean checkFileWasDownloaded(File directory, String fileName) {
+        File[] files = directory.listFiles();
+        for (File fil : files) {
+            if (fil.getName().equals(fileName)) {
+                System.out.println("File was found");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void emptyFolderAfterTheTest(File directory) {
+        File[] allFiles = directory.listFiles();
+        for (File file : allFiles) {
+            file.delete();
+        }
+
 
     }
 
