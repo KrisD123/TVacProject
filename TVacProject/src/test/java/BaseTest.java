@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pages.*;
 import selenium.Browser;
 import selenium.BrowserCapabilities;
 import selenium.PropertyLoader;
@@ -27,6 +28,12 @@ public class BaseTest {
     String userName;
     String userPassword;
     WebDriverWait wait;
+    LoginPage loginPage;
+    TVacMainPage tVacMainPage;
+    MyTeamPage myTeamPage;
+    EmployeesVacationPage employeesVacationPage;
+    MyVacationsPage myVacationsPage;
+    RepresentativesPage representativesPage;
 
     @BeforeClass
     public void init() {
@@ -45,45 +52,18 @@ public class BaseTest {
         userName = PropertyLoader.loadProperty("user.name");
         userPassword = PropertyLoader.loadProperty("user.password");
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertTrue(checkLoginPageOpen());
+        loginPage = new LoginPage(driver);
+        tVacMainPage = new TVacMainPage(driver);
+        myTeamPage = new MyTeamPage(driver);
+        employeesVacationPage = new EmployeesVacationPage(driver);
+        myVacationsPage = new MyVacationsPage(driver);
+        representativesPage = new RepresentativesPage(driver);
+        Assert.assertTrue(loginPage.checkLoginPageOpen());
     }
 
-    public boolean checkLoginPageOpen() {
-        String title = driver.findElement(By.xpath("//title")).getAttribute("innerText");
-        if (title.equals("Login")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     protected void login(String userName, String userPassword) {
-        WebElement username = driver.findElement(By.id("username"));
-        username.clear();
-        username.sendKeys(userName);
-
-        WebElement password = driver.findElement(By.id("password"));
-        password.clear();
-        password.sendKeys(userPassword);
-
-        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-        loginButton.click();
-    }
-
-    protected void openMyTeamSection() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(wait.until(elementToBeClickable(By.xpath("//div[@class='menu-heading btn-brand']")))).build().perform();
-        wait.until(visibilityOfElementLocated(By.linkText("Моя команда"))).click();
-    }
-
-    protected void openRepresentativesSectionInNewWindow() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(wait.until(elementToBeClickable(By.xpath("//div[@class='menu-heading btn-brand']")))).build().perform();
-        actions.keyDown(Keys.CONTROL)
-                .click(wait.until(visibilityOfElementLocated(By.linkText("Представители"))))
-                .keyUp(Keys.CONTROL)
-                .build()
-                .perform();
+        new LoginPage(driver).performLogin(userName, userPassword);
     }
 
     @AfterClass

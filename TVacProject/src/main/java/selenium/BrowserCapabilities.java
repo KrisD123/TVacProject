@@ -52,7 +52,7 @@ public class BrowserCapabilities {
         profile.setPreference("browser.download.folderList", 2);
         profile.setPreference("browser.download.manager.showWhenStarting", false);
         profile.setPreference("browser.download.dir", DOWNLOAD_DIRECTORY);
-        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "text/xml, text/html, text/plain, application/text, application/zip, application/json");
+        profile.setPreference("browser.helperApps.neverAsk.saveToDisk", "text/xml, text/html, text/plain, application/text, application/zip, application/json, application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         profile.setPreference("browser.helperApps.alwaysAsk.force", false);
         profile.setPreference("browser.download.manager.alertOnEXEOpen", false);
         profile.setPreference("browser.download.manager.focusWhenStarting", false);

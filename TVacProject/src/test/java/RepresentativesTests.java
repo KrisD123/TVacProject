@@ -1,6 +1,7 @@
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import pages.RepresentativesPage;
 
 import java.util.Set;
 
@@ -17,16 +18,8 @@ public class RepresentativesTests extends BaseTest {
 
     @Test
     public void openRepresentativesSectionInNewWindowTest() {
-        Set<String> oldWindowHandles = driver.getWindowHandles();
-        openRepresentativesSectionInNewWindow();
-        Set<String> newWindowHandles = driver.getWindowHandles();
-        newWindowHandles.removeAll(oldWindowHandles);
-        String newWIndowHandle = newWindowHandles.iterator().next();
-
-        driver.switchTo().window(newWIndowHandle);
-
-
-        Assert.assertTrue(wait.until(titleIs("Представители")));
+        tVacMainPage.openRepresentativesSectionInNewWindow();
+        Assert.assertTrue(representativesPage.checkRepresentativesPageIsOpen());
 
     }
 }
