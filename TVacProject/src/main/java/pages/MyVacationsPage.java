@@ -1,6 +1,7 @@
 package pages;
 
 import ObjectModel.Vacation;
+import org.apache.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -24,6 +25,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
  * Created by kdodonov on 24.10.2017.
  */
 public class MyVacationsPage extends TVacMainPage {
+    private static final Logger LOGGER = Logger.getLogger(MyVacationsPage.class);
     private static final String VACATION_LINE_IN_TABLE_XPATH = "//tbody[@id='employeeVacations']/tr[contains(@class, 'vacation-row')]";
     private static final String ADD_VACATION_BUTTON_XPATH = "//button[contains(text(), 'новый отпуск')]";
     private static final String DELETE_VACATION_BUTTON_XPATH = "//tbody[@id='employeeVacations']/tr[@data-vacation-id='%s']/td/div/button[@title='Удалить']";
@@ -74,11 +76,13 @@ public class MyVacationsPage extends TVacMainPage {
     }
 
     public void chooseStartDate() {
+        LOGGER.info("Select start date");
         WebElement startDate = driver.findElement(By.xpath(START_DATE_FIELD_XPATH));
         chooseAnyDateFromCalendar(startDate);
     }
 
     public void chooseEndDate() {
+        LOGGER.info("Select end date");
         WebElement endDate = driver.findElement(By.xpath(END_DATE_FIELD_XPATH));
         chooseAnyDateFromCalendar(endDate);
     }
@@ -95,19 +99,23 @@ public class MyVacationsPage extends TVacMainPage {
 
     }
     public void clickOnStartDateField() {
+        LOGGER.info("Click 'Start date'");
         startDateField.click();
     }
 
     public void clickOnEndDateField() {
+        LOGGER.info("Click 'End date'");
         endDateField.click();
     }
 
     public void deleteVacation(String idOfVacationToDelete) {
+        LOGGER.info("Delete vacation with id: " + idOfVacationToDelete);
         clickOnDeleteVacationButton(idOfVacationToDelete);
         wait.until(elementToBeClickable(By.xpath(DELETE_VACATION_CONFIRMATION_XPATH))).click();
     }
 
     public String getLastAddedVacationId() {
+        LOGGER.info("Get id of last added vacation");
         List<WebElement> vacationIDs = driver.findElements(By.xpath(VACATION_ID_XPATH));
         List<String> vacationIDsText = new ArrayList<>();
         //get list of IDs of all vacations to determine the last added one
@@ -118,16 +126,20 @@ public class MyVacationsPage extends TVacMainPage {
         Collections.sort(vacationIDsText, Collections.<String>reverseOrder());
 
         //Get maximum ID
+        LOGGER.info("Id of last added vacaion: " + vacationIDsText.get(0));
         return vacationIDsText.get(0);
     }
 
     public void addNewVacation(Vacation vacation) {
+        LOGGER.info("Add new vacation");
         clickAddVacationButton();
+        LOGGER.info("Select vacation type: " + vacation.getVacationType());
         Select select = new Select(vacationTypeDropdown);
         select.selectByVisibleText(vacation.getVacationType());
 
         chooseStartDate();
         chooseEndDate();
+        LOGGER.info("Click 'Save' button");
         saveButton.click();
     }
 
@@ -136,47 +148,66 @@ public class MyVacationsPage extends TVacMainPage {
     }
 
     public String getVacationStatus(String vacationId) {
-        return wait.until(visibilityOfElementLocated(By.xpath(String.format(VACATION_STATUS_XPATH, vacationId)))).getText();
+        LOGGER.info("Getting status of vacation with id: " + vacationId);
+        String vacationStatus = wait.until(visibilityOfElementLocated(By.xpath(String.format(VACATION_STATUS_XPATH, vacationId)))).getText();
+        LOGGER.info("Status of vacation: " + vacationStatus);
+        return vacationStatus;
     }
 
     public boolean isNotificationInfoDisplayed() {
+        LOGGER.info("Check if 'Notification Info' section is displayed");
         return notificationInfoSection.isDisplayed();
     }
 
     public void openNotificationInfoSection() {
+        LOGGER.info("Open 'Notification Info' section");
         showNotificationInfoButton.click();
     }
 
     public boolean isAddVacationButtonEnabled() {
+        LOGGER.info("Check if 'Add' button is enabled");
         return addVacationButton.isEnabled();
     }
 
     public void clickAddVacationButton() {
+        LOGGER.info("Click 'Add' button");
         addVacationButton.click();
     }
 
     public boolean isCalendarDisplayed() {
+        LOGGER.info("Check if calendar is displayed");
         return calendar.isDisplayed();
     }
 
     public String getCancelButtonTooltip() {
-       return cancelButtonTooltip.getAttribute("title");
+        LOGGER.info("Get tooltip text of 'Cancel' button");
+        String tooltipText = cancelButtonTooltip.getAttribute("title");
+        LOGGER.info("Tooltip text: " + tooltipText);
+       return tooltipText;
     }
 
     public String getRemoveButtonTooltip() {
-        return  removeButtonTooltip.getAttribute("title");
+        LOGGER.info("Get tooltip text of 'Remove' button");
+        String tooltipText = removeButtonTooltip.getAttribute("title");
+        LOGGER.info("Tooltip text: " + tooltipText);
+        return  tooltipText;
     }
 
     public String getSaveButtonTooltip() {
-        return  saveButtonTooltip.getAttribute("title");
+        LOGGER.info("Get tooltip text of 'Save' button");
+        String tooltipText = saveButtonTooltip.getAttribute("title");
+        LOGGER.info("Tooltip text: " + tooltipText);
+        return  tooltipText;
     }
 
     public void clickOnDeleteVacationButton(String vacationId) {
+        LOGGER.info("Click on 'Delete' button");
 
         wait.until(elementToBeClickable(By.xpath(String.format(DELETE_VACATION_BUTTON_XPATH, vacationId)))).click();
     }
 
     public void downloadVacation() throws InterruptedException {
+        LOGGER.info("Download vacation");
         downloadVacationButton.click();
         Thread.sleep(3000);
     }

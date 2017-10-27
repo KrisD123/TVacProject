@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.*;
@@ -36,11 +37,12 @@ public class BaseTest {
     RepresentativesPage representativesPage;
 
     @BeforeClass
-    public void init() {
+    public void init(ITestContext iTestContext) {
         browser.setBrowserName(PropertyLoader.loadProperty("browser.name"));
         browser.setVersion(PropertyLoader.loadProperty("browser.version"));
         browser.setPlatform(PropertyLoader.loadProperty("browser.platform"));
         driver = WebDriverPool.DEFAULT.getDriver(BrowserCapabilities.getCapabilities(browser));
+        iTestContext.setAttribute("driver", driver);
         wait = new WebDriverWait(driver, 10);
         driver.get(PropertyLoader.loadProperty("site.url"));
         if (browser.getBrowserName().equals("chrome")) {

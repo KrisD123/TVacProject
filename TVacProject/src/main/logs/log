@@ -1,0 +1,269 @@
+2017-10-27 10:50:35,384(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 10:50:35,497(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: wrongPassword 
+2017-10-27 10:50:35,614(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 11:28:27,898(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 11:28:28,013(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: InsertYourPwd 
+2017-10-27 11:28:28,131(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 11:28:28,396(dd.MM.yyyy) - INFO: listeners.RunListener 58 Taking screenshot of the page 
+2017-10-27 16:35:01,135(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 16:35:01,252(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: wrongPassword 
+2017-10-27 16:35:01,371(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 16:35:02,040(dd.MM.yyyy) - WARN: pages.LoginPage 46 Error message is displayed: Неверная пара логин/пароль. 
+2017-10-27 16:38:52,528(dd.MM.yyyy) - INFO: LoginTests 38 Test for successful login 
+2017-10-27 16:38:52,530(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 16:38:52,642(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: 56990!@Qq 
+2017-10-27 16:38:52,752(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 16:38:53,605(dd.MM.yyyy) - INFO: pages.LoginPage 55 Check if login error message is displayed 
+2017-10-27 16:38:53,650(dd.MM.yyyy) - INFO: pages.LoginPage 60 Error message is not displayed 
+2017-10-27 16:38:53,651(dd.MM.yyyy) - INFO: LoginTests 45 Check that link with user name is displayed 
+2017-10-27 16:39:54,448(dd.MM.yyyy) - INFO: LoginTests 28 Test for unsuccessful login 
+2017-10-27 16:39:54,451(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 16:39:54,558(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: wrongPassword 
+2017-10-27 16:39:54,667(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 16:39:54,859(dd.MM.yyyy) - INFO: LoginTests 31 Check that error message with correct text is displayed 
+2017-10-27 16:39:55,682(dd.MM.yyyy) - WARN: pages.LoginPage 46 Error message is displayed: Неверная пара логин/пароль. 
+2017-10-27 17:02:57,635(dd.MM.yyyy) - INFO: pages.LoginPage 34 Enter user name: kdodonov 
+2017-10-27 17:02:57,742(dd.MM.yyyy) - INFO: pages.LoginPage 37 Enter user password: 56990!@Qq 
+2017-10-27 17:02:57,845(dd.MM.yyyy) - INFO: pages.LoginPage 40 Click 'Submit' button 
+2017-10-27 17:02:58,782(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:03:00,028(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:03:00,036(dd.MM.yyyy) - INFO: MyTeamTests 32 Test for search of employee by surname 
+2017-10-27 17:03:00,036(dd.MM.yyyy) - INFO: pages.MyTeamPage 41 Search employee by value: Ещенко 
+2017-10-27 17:03:00,246(dd.MM.yyyy) - INFO: pages.MyTeamPage 47 Check that employee with surname: Ещенко is present in the results list 
+2017-10-27 17:03:00,275(dd.MM.yyyy) - INFO: pages.MyTeamPage 50 Employee with surname Ещенко is present in the results list 
+2017-10-27 17:05:25,351(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:05:25,353(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:05:25,461(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:05:25,566(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:05:26,731(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:05:27,564(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:05:27,573(dd.MM.yyyy) - INFO: MyTeamTests 42 Test for search of employees by project 
+2017-10-27 17:05:27,573(dd.MM.yyyy) - INFO: pages.MyTeamPage 41 Search employee by value: CIAM Test 
+2017-10-27 17:05:27,881(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:27,996(dd.MM.yyyy) - INFO: pages.MyTeamPage 77 Employee is from project: CCP + 4 
+2017-10-27 17:05:27,997(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,037(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,037(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,081(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,081(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,120(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,121(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,162(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,162(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,200(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,201(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,238(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,238(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,275(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test + 1 
+2017-10-27 17:05:28,275(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,312(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:05:28,313(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:05:28,350(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:06:59,321(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:06:59,323(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:06:59,429(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:06:59,539(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:07:01,066(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:07:02,114(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:07:02,123(dd.MM.yyyy) - INFO: MyTeamTests 42 Test for search of employees by project 
+2017-10-27 17:07:02,123(dd.MM.yyyy) - INFO: pages.MyTeamPage 41 Search employee by value: CIAM Test 
+2017-10-27 17:07:02,445(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,573(dd.MM.yyyy) - INFO: pages.MyTeamPage 77 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,574(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,619(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,619(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,659(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,659(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,699(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,702(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,743(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,743(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,782(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,783(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,822(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,822(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,861(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test + 1 
+2017-10-27 17:07:02,861(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,901(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:07:02,901(dd.MM.yyyy) - INFO: pages.MyTeamPage 60 Check that employee in the results list is from correct project 
+2017-10-27 17:07:02,940(dd.MM.yyyy) - INFO: pages.MyTeamPage 67 Employee is from project: CIAM Test 
+2017-10-27 17:08:40,383(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:08:40,385(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:08:40,487(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:08:40,594(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:08:41,716(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:08:42,598(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:08:42,606(dd.MM.yyyy) - INFO: MyTeamTests 57 Test for search of non existing employee 
+2017-10-27 17:08:42,606(dd.MM.yyyy) - INFO: pages.MyTeamPage 41 Search employee by value: SomeEmployee 
+2017-10-27 17:08:42,898(dd.MM.yyyy) - INFO: pages.MyTeamPage 93 The message about empty search result is: Ничего не найдено 
+2017-10-27 17:09:45,920(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:09:45,922(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:09:46,030(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:09:46,137(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:09:47,053(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:09:47,959(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:09:47,969(dd.MM.yyyy) - INFO: MyTeamTests 66 Test for favourite mark for employees 
+2017-10-27 17:09:47,969(dd.MM.yyyy) - INFO: pages.MyTeamPage 105 Get random employee name from the list 
+2017-10-27 17:09:48,035(dd.MM.yyyy) - INFO: pages.MyTeamPage 112 Random employee name from the list ia: Латышева Екатерина 
+2017-10-27 17:09:48,035(dd.MM.yyyy) - INFO: pages.MyTeamPage 99 Click on 'Favoutite' for employee with name: Латышева Екатерина 
+2017-10-27 17:09:48,168(dd.MM.yyyy) - INFO: pages.MyTeamPage 117 Check that employee with name: Латышева Екатерина is marked as favourite 
+2017-10-27 17:09:48,204(dd.MM.yyyy) - INFO: pages.TVacMainPage 62 Open Home page 
+2017-10-27 17:09:49,381(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:09:50,844(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:09:50,844(dd.MM.yyyy) - INFO: pages.MyTeamPage 117 Check that employee with name: Латышева Екатерина is marked as favourite 
+2017-10-27 17:09:50,872(dd.MM.yyyy) - INFO: pages.MyTeamPage 99 Click on 'Favoutite' for employee with name: Латышева Екатерина 
+2017-10-27 17:11:08,265(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:11:08,267(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:11:08,373(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:11:08,479(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:11:09,554(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:11:10,789(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:11:10,799(dd.MM.yyyy) - INFO: MyTeamTests 66 Test for favourite mark for employees 
+2017-10-27 17:11:10,799(dd.MM.yyyy) - INFO: pages.MyTeamPage 105 Get random employee name from the list 
+2017-10-27 17:11:10,873(dd.MM.yyyy) - INFO: pages.MyTeamPage 112 Random employee name from the list ia: Вильданова Эльмира 
+2017-10-27 17:11:10,873(dd.MM.yyyy) - INFO: pages.MyTeamPage 99 Click on 'Favoutite' for employee with name: Вильданова Эльмира 
+2017-10-27 17:11:11,012(dd.MM.yyyy) - INFO: pages.MyTeamPage 117 Check that employee with name: Вильданова Эльмира is marked as favourite 
+2017-10-27 17:11:11,034(dd.MM.yyyy) - INFO: MyTeamTests 71 Employee is marked as favourite 
+2017-10-27 17:11:11,034(dd.MM.yyyy) - INFO: pages.TVacMainPage 62 Open Home page 
+2017-10-27 17:11:11,827(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:11:13,242(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:11:13,243(dd.MM.yyyy) - INFO: pages.MyTeamPage 117 Check that employee with name: Вильданова Эльмира is marked as favourite 
+2017-10-27 17:11:13,270(dd.MM.yyyy) - INFO: MyTeamTests 77 Employee is marked as favourite 
+2017-10-27 17:11:13,270(dd.MM.yyyy) - INFO: pages.MyTeamPage 99 Click on 'Favoutite' for employee with name: Вильданова Эльмира 
+2017-10-27 17:18:30,254(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:18:30,257(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:18:30,363(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:18:30,465(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:18:31,698(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:18:33,134(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:18:33,142(dd.MM.yyyy) - INFO: MyTeamTests 84 Test to verify vacations view of employees 
+2017-10-27 17:18:33,142(dd.MM.yyyy) - INFO: pages.MyTeamPage 122 Open vacations of random employee 
+2017-10-27 17:18:33,206(dd.MM.yyyy) - INFO: pages.MyTeamPage 129 Random eployee name: Груничева Екатерина 
+2017-10-27 17:18:33,876(dd.MM.yyyy) - INFO: pages.MyTeamPage 131 Vacations page was open 
+2017-10-27 17:18:33,877(dd.MM.yyyy) - INFO: pages.EmployeesVacationPage 32 Check that employee vacations page is open 
+2017-10-27 17:18:33,900(dd.MM.yyyy) - INFO: pages.EmployeesVacationPage 37 Check that employee name is displayed in header 
+2017-10-27 17:18:33,941(dd.MM.yyyy) - INFO: pages.EmployeesVacationPage 43 Check body of vacation section 
+2017-10-27 17:18:33,960(dd.MM.yyyy) - INFO: pages.EmployeesVacationPage 45 Check message about absent vacations is displayed 
+2017-10-27 17:18:33,998(dd.MM.yyyy) - INFO: pages.EmployeesVacationPage 47 Message is: Отпусков пока нет 
+2017-10-27 17:18:34,021(dd.MM.yyyy) - INFO: pages.TVacMainPage 50 Open 'My team' section 
+2017-10-27 17:18:34,884(dd.MM.yyyy) - INFO: pages.TVacMainPage 53 'My team' section was open 
+2017-10-27 17:20:15,882(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:20:15,884(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:20:15,992(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:20:16,098(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:20:17,307(dd.MM.yyyy) - INFO: pages.TVacMainPage 67 Open 'My representatives' section in a new window 
+2017-10-27 17:24:33,644(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:24:33,646(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:24:33,753(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:24:33,859(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:24:34,661(dd.MM.yyyy) - INFO: RepresentativesTests 27 Test to open 'My representatives' page in a new window 
+2017-10-27 17:24:34,661(dd.MM.yyyy) - INFO: pages.TVacMainPage 67 Open 'My representatives' section in a new window 
+2017-10-27 17:24:34,953(dd.MM.yyyy) - INFO: pages.RepresentativesPage 16 Check that 'Representatives' page is open 
+2017-10-27 17:24:35,986(dd.MM.yyyy) - INFO: RepresentativesTests 30 'My representatives' page was open in a new window 
+2017-10-27 17:38:50,946(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:38:50,948(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:38:51,055(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:38:51,164(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:38:52,142(dd.MM.yyyy) - INFO: VacationsTests 41 Test for creation of a new vacation 
+2017-10-27 17:38:52,143(dd.MM.yyyy) - INFO: pages.MyVacationsPage 130 Add new vacation 
+2017-10-27 17:38:52,143(dd.MM.yyyy) - INFO: pages.MyVacationsPage 131 Click 'Add' button 
+2017-10-27 17:38:52,235(dd.MM.yyyy) - INFO: pages.MyVacationsPage 133 Select vacation type: За свой счет 
+2017-10-27 17:38:52,360(dd.MM.yyyy) - INFO: pages.MyVacationsPage 137 Select start date 
+2017-10-27 17:38:52,534(dd.MM.yyyy) - INFO: pages.MyVacationsPage 139 Select end date 
+2017-10-27 17:38:52,680(dd.MM.yyyy) - INFO: pages.MyVacationsPage 141 Click 'Save' button 
+2017-10-27 17:38:52,826(dd.MM.yyyy) - INFO: pages.MyVacationsPage 114 Get id of last added vacation 
+2017-10-27 17:38:52,911(dd.MM.yyyy) - INFO: pages.MyVacationsPage 125 Id of last added vacaion: 12565 
+2017-10-27 17:38:52,912(dd.MM.yyyy) - INFO: pages.MyVacationsPage 150 Getting status of vacation with id: 12565 
+2017-10-27 17:38:53,042(dd.MM.yyyy) - INFO: pages.MyVacationsPage 152 Status of vacation: Заявление принято 
+2017-10-27 17:38:53,043(dd.MM.yyyy) - INFO: listeners.RunListener 58 Taking screenshot of the page 
+2017-10-27 17:40:22,606(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:40:22,608(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:40:22,712(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:40:22,819(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:40:28,805(dd.MM.yyyy) - INFO: pages.MyVacationsPage 167 Check if 'Add' button enabled 
+2017-10-27 17:40:28,921(dd.MM.yyyy) - INFO: pages.MyVacationsPage 167 Check if 'Add' button enabled 
+2017-10-27 17:40:29,038(dd.MM.yyyy) - INFO: pages.MyVacationsPage 176 Check if calendar is displayed 
+2017-10-27 17:40:29,170(dd.MM.yyyy) - INFO: pages.MyVacationsPage 176 Check if calendar is displayed 
+2017-10-27 17:40:29,367(dd.MM.yyyy) - INFO: pages.MyVacationsPage 181 Get tooltip text of 'Cancel' button 
+2017-10-27 17:40:29,392(dd.MM.yyyy) - INFO: pages.MyVacationsPage 183 Tooltip text: Отменить 
+2017-10-27 17:40:29,392(dd.MM.yyyy) - INFO: pages.MyVacationsPage 188 Get tooltip text of 'Remove' button 
+2017-10-27 17:40:29,418(dd.MM.yyyy) - INFO: pages.MyVacationsPage 190 Tooltip text: Удалить 
+2017-10-27 17:40:29,419(dd.MM.yyyy) - INFO: pages.MyVacationsPage 195 Get tooltip text of 'Save' button 
+2017-10-27 17:40:29,444(dd.MM.yyyy) - INFO: pages.MyVacationsPage 197 Tooltip text: Сохранить 
+2017-10-27 17:40:29,615(dd.MM.yyyy) - INFO: pages.MyVacationsPage 167 Check if 'Add' button enabled 
+2017-10-27 17:45:15,332(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:45:15,334(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:45:15,442(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:45:15,547(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:45:18,485(dd.MM.yyyy) - INFO: VacationsTests 41 Test for creation of a new vacation 
+2017-10-27 17:45:18,485(dd.MM.yyyy) - INFO: pages.MyVacationsPage 134 Add new vacation 
+2017-10-27 17:45:18,486(dd.MM.yyyy) - INFO: pages.MyVacationsPage 173 Click 'Add' button 
+2017-10-27 17:45:18,578(dd.MM.yyyy) - INFO: pages.MyVacationsPage 136 Select vacation type: За свой счет 
+2017-10-27 17:45:18,700(dd.MM.yyyy) - INFO: pages.MyVacationsPage 79 Select start date 
+2017-10-27 17:45:18,849(dd.MM.yyyy) - INFO: pages.MyVacationsPage 85 Select end date 
+2017-10-27 17:45:18,967(dd.MM.yyyy) - INFO: pages.MyVacationsPage 142 Click 'Save' button 
+2017-10-27 17:45:19,118(dd.MM.yyyy) - INFO: pages.MyVacationsPage 118 Get id of last added vacation 
+2017-10-27 17:45:19,207(dd.MM.yyyy) - INFO: pages.MyVacationsPage 129 Id of last added vacaion: 12565 
+2017-10-27 17:45:19,208(dd.MM.yyyy) - INFO: pages.MyVacationsPage 151 Getting status of vacation with id: 12565 
+2017-10-27 17:45:19,411(dd.MM.yyyy) - INFO: pages.MyVacationsPage 153 Status of vacation: Заявление принято 
+2017-10-27 17:45:19,412(dd.MM.yyyy) - INFO: listeners.RunListener 58 Taking screenshot of the page 
+2017-10-27 17:47:26,691(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:47:26,693(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:47:26,802(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:47:26,905(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:47:27,918(dd.MM.yyyy) - INFO: pages.MyVacationsPage 158 Check if 'Notification Info' section is displayed 
+2017-10-27 17:47:27,955(dd.MM.yyyy) - INFO: pages.MyVacationsPage 163 Open 'Notification Info' section 
+2017-10-27 17:47:28,045(dd.MM.yyyy) - INFO: pages.MyVacationsPage 158 Check if 'Notification Info' section is displayed 
+2017-10-27 17:48:53,655(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:48:53,657(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:48:53,782(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:48:53,895(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:48:55,054(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button enabled 
+2017-10-27 17:48:55,087(dd.MM.yyyy) - INFO: pages.MyVacationsPage 173 Click 'Add' button 
+2017-10-27 17:48:55,170(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button enabled 
+2017-10-27 17:48:55,189(dd.MM.yyyy) - INFO: pages.MyVacationsPage 102 Click 'Start date' 
+2017-10-27 17:48:55,291(dd.MM.yyyy) - INFO: pages.MyVacationsPage 178 Check if calendar is displayed 
+2017-10-27 17:48:55,335(dd.MM.yyyy) - INFO: pages.MyVacationsPage 107 Click 'End date' 
+2017-10-27 17:48:55,425(dd.MM.yyyy) - INFO: pages.MyVacationsPage 178 Check if calendar is displayed 
+2017-10-27 17:48:55,458(dd.MM.yyyy) - INFO: pages.MyVacationsPage 79 Select start date 
+2017-10-27 17:48:55,641(dd.MM.yyyy) - INFO: pages.MyVacationsPage 183 Get tooltip text of 'Cancel' button 
+2017-10-27 17:48:55,668(dd.MM.yyyy) - INFO: pages.MyVacationsPage 185 Tooltip text: Отменить 
+2017-10-27 17:48:55,669(dd.MM.yyyy) - INFO: pages.MyVacationsPage 190 Get tooltip text of 'Remove' button 
+2017-10-27 17:48:55,694(dd.MM.yyyy) - INFO: pages.MyVacationsPage 192 Tooltip text: Удалить 
+2017-10-27 17:48:55,695(dd.MM.yyyy) - INFO: pages.MyVacationsPage 197 Get tooltip text of 'Save' button 
+2017-10-27 17:48:55,722(dd.MM.yyyy) - INFO: pages.MyVacationsPage 199 Tooltip text: Сохранить 
+2017-10-27 17:48:55,722(dd.MM.yyyy) - INFO: pages.MyVacationsPage 204 Click on 'Delete' button 
+2017-10-27 17:48:55,824(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button enabled 
+2017-10-27 17:54:14,594(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:54:14,596(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:54:14,703(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:54:14,807(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:54:16,419(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button is enabled 
+2017-10-27 17:54:16,453(dd.MM.yyyy) - INFO: VacationsTests 77 'Add' button is enabled 
+2017-10-27 17:54:16,454(dd.MM.yyyy) - INFO: pages.MyVacationsPage 173 Click 'Add' button 
+2017-10-27 17:54:16,536(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button is enabled 
+2017-10-27 17:54:16,556(dd.MM.yyyy) - INFO: VacationsTests 82 'Add' button is disabled 
+2017-10-27 17:54:16,557(dd.MM.yyyy) - INFO: pages.MyVacationsPage 102 Click 'Start date' 
+2017-10-27 17:54:16,661(dd.MM.yyyy) - INFO: pages.MyVacationsPage 178 Check if calendar is displayed 
+2017-10-27 17:54:16,705(dd.MM.yyyy) - INFO: VacationsTests 86 Calendar is displayed 
+2017-10-27 17:54:16,705(dd.MM.yyyy) - INFO: pages.MyVacationsPage 107 Click 'End date' 
+2017-10-27 17:54:16,893(dd.MM.yyyy) - INFO: pages.MyVacationsPage 178 Check if calendar is displayed 
+2017-10-27 17:54:16,923(dd.MM.yyyy) - INFO: VacationsTests 89 Calendar is displayed 
+2017-10-27 17:54:16,923(dd.MM.yyyy) - INFO: pages.MyVacationsPage 79 Select start date 
+2017-10-27 17:54:17,060(dd.MM.yyyy) - INFO: VacationsTests 93 Check that values in Start date and End Date fields are the same 
+2017-10-27 17:54:17,094(dd.MM.yyyy) - INFO: VacationsTests 97 Start date: 17.11.2017, End Date: 17.11.2017, values are the same 
+2017-10-27 17:54:17,094(dd.MM.yyyy) - INFO: VacationsTests 100 Check that tooltips have correct text 
+2017-10-27 17:54:17,095(dd.MM.yyyy) - INFO: pages.MyVacationsPage 183 Get tooltip text of 'Cancel' button 
+2017-10-27 17:54:17,122(dd.MM.yyyy) - INFO: pages.MyVacationsPage 185 Tooltip text: Отменить 
+2017-10-27 17:54:17,122(dd.MM.yyyy) - INFO: pages.MyVacationsPage 190 Get tooltip text of 'Remove' button 
+2017-10-27 17:54:17,148(dd.MM.yyyy) - INFO: pages.MyVacationsPage 192 Tooltip text: Удалить 
+2017-10-27 17:54:17,148(dd.MM.yyyy) - INFO: pages.MyVacationsPage 197 Get tooltip text of 'Save' button 
+2017-10-27 17:54:17,173(dd.MM.yyyy) - INFO: pages.MyVacationsPage 199 Tooltip text: Сохранить 
+2017-10-27 17:54:17,174(dd.MM.yyyy) - INFO: VacationsTests 109 Tooltips have correct text 
+2017-10-27 17:54:17,174(dd.MM.yyyy) - INFO: pages.MyVacationsPage 204 Click on 'Delete' button 
+2017-10-27 17:54:17,279(dd.MM.yyyy) - INFO: pages.MyVacationsPage 168 Check if 'Add' button is enabled 
+2017-10-27 17:55:44,001(dd.MM.yyyy) - INFO: pages.LoginPage 34 Perform login 
+2017-10-27 17:55:44,003(dd.MM.yyyy) - INFO: pages.LoginPage 35 Enter user name: kdodonov 
+2017-10-27 17:55:44,110(dd.MM.yyyy) - INFO: pages.LoginPage 38 Enter user password: 56990!@Qq 
+2017-10-27 17:55:44,215(dd.MM.yyyy) - INFO: pages.LoginPage 41 Click 'Submit' button 
+2017-10-27 17:55:45,134(dd.MM.yyyy) - INFO: pages.MyVacationsPage 210 Download vacation 

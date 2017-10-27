@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.*;
  * Created by kdodonov on 24.10.2017.
  */
 public class TVacMainPage extends BasePage {
+    private static final Logger LOGGER = Logger.getLogger(TVacMainPage.class);
     private static final String USER_NAME_LINK_XPATH = "//div[@class='menu-heading btn-brand']";
 
     @FindBy(xpath = USER_NAME_LINK_XPATH)
@@ -34,8 +36,10 @@ public class TVacMainPage extends BasePage {
     }
 
     public void logout() {
+        LOGGER.info("Perform log out");
         moveToUserNameLink();
         wait.until(visibilityOf(exitLink)).click();
+        LOGGER.info("User was logged out");
     }
 
     public String getTextOfUserNameLink() {
@@ -43,8 +47,10 @@ public class TVacMainPage extends BasePage {
     }
 
     public void openMyTeamSection() {
+        LOGGER.info("Open 'My team' section");
         moveToUserNameLink();
         wait.until(visibilityOf(myTeamLink)).click();
+        LOGGER.info("'My team' section was open");
     }
 
     private void moveToUserNameLink() {
@@ -53,10 +59,12 @@ public class TVacMainPage extends BasePage {
     }
 
     public void openHomePage() {
+        LOGGER.info("Open Home page");
         homePageLink.click();
     }
 
     public void openRepresentativesSectionInNewWindow() {
+        LOGGER.info("Open 'My representatives' section in a new window");
         Set<String> oldWindowHandles = driver.getWindowHandles();
 
         Actions actions = new Actions(driver);

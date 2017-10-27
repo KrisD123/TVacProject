@@ -42,6 +42,11 @@
             <artifactId>webdriver-factory</artifactId>
             <version>4.2</version>
         </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
     </dependencies>
     <profiles>
         <profile>
@@ -49,7 +54,7 @@
             <properties>
                 <site.url>https://t-vac-testschool:38443/</site.url>
                 <user.name>kdodonov</user.name>
-                <user.password>InsertYourPwd</user.password>
+                <user.password>inserYourPwd</user.password>
                 <browser.name>firefox</browser.name>
                 <browser.version></browser.version>
                 <browser.platform></browser.platform>
@@ -63,7 +68,7 @@
         <properties>
             <site.url>https://t-vac-testschool:38443/</site.url>
             <user.name>kdodonov</user.name>
-            <user.password>InsertYourPwd</user.password>
+            <user.password>inserYourPwd</user.password>
             <browser.name>chrome</browser.name>
             <browser.version></browser.version>
             <browser.platform></browser.platform>
